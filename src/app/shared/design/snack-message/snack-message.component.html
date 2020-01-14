@@ -1,0 +1,6 @@
+<div class="container">
+    <span>{{data.message}}</span>
+    <mat-icon class="icon-message" 
+    [ngClass]="{'success': data.icon==='check_circle', 'warning':data.icon==='warning', 'error': data.icon==='error'}" 
+   >{{data.icon}}</mat-icon>
+</div>

@@ -1,0 +1,9 @@
+mat-card-content{
+    height: 100vh;
+    position: relative;
+}
+
+.add-marker{
+    float: right;
+    bottom: 5px !important;
+}

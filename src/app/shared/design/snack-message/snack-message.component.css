@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+}
+
+span{
+    align-content: center;
+    vertical-align: middle;
+}
+
+.icon-message{
+    vertical-align: middle;
+    float: right;
+}
+
+.success{
+    color: #00b600 !important;
+}
+
+.warning{
+    color: #f3f334 !important;
+}
+
+.error{
+    color: rgb(235, 42, 42) !important;
+}

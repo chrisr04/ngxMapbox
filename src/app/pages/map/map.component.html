@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title>
+        Mapa
+        <button mat-flat-button color="primary" class="add-marker" (click)="newMarker=true">
+          nuevo marcador  <mat-icon>add</mat-icon>
+        </button>
+    </mat-card-title>
+    <mat-card-content>
+        <mbx-map [idMap]="'map-mapbox'" [currentLocation]="true" [zoom]="15" (clickMap)="addMarker($event)">
+            <mbx-marker *ngFor="let marker of markers; let i = index" 
+                        [coords]="[marker.lng, marker.lat]"
+                        [title]="marker.title"
+                        [img]="marker.img"
+                        [description]="marker.description"  
+                        [draggable]="true"
+                        (editMarker)="editMarker($event,marker)"
+                        (deleteMarker)="deleteMarker(i)"
+                        (dragEndMarker)="changeCoords($event,marker)"> 
+            </mbx-marker>
+            <mbx-route *ngFor="let marker of markers; let i = index;"   
+                        idRoute="{{'route'+i}}" 
+                        [startCoords]="[-74.2061816,11.243449199999999]" 
+                        [endCoords]="[marker.lng, marker.lat]">
+            </mbx-route>
+        </mbx-map>
+    </mat-card-content>
+    <mat-card-actions align='end'>
+
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,13 @@
+<div class="container">
+    <h3>{{title}}</h3>
+    <p *ngIf="img"><img [src]="img" [alt]="title"></p>
+    <p class="description">{{description}}</p>
+    <hr>
+    <div>
+        <button mat-button color="primary" (click)="editMarker()">Editar</button>
+        <button mat-button color="warn" (click)="deleteMarker()">Eliminar</button>
+    </div>    
+</div>
+
+
+
